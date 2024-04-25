@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="prototipo_popup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="apiRequest.js"></script>
+    <link rel="stylesheet" href="ruleta.css" />
+    <title>AI Tools</title>
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <img src="navLogo.png" alt="Logo" class="logo" />
+      <input type="text" placeholder="Search..." class="search-bar" />
+    </div>
+    <div class="second-bar">
+      <!-- SideBar -->
+      <div class="menu" id="myMenu">
+        <!-- purpose submenu -->
+        <div class="dropdown">
+          <br /><br />
+          <a href="#" class="dropdown-purpose">Purpose</a><br>
+            <div class="dropdown-content">
+              <a href="#">Development</a>
+              <a href="#">General</a>
+              <a href="#">Design</a>
+              <a href="#">Marketing</a>
+              <a href="#">Operations</a>
+              <a href="#">People</a>
+              <a href="#">Educational</a>
+            </div>
+          </div>
+
+        <div class="dropdown">
+          <a href="#">Ecosystem</a><br>
+            <div class="dropdown-content">
+              <a href="#">Cloud Service</a>
+              <a href="#">Foundation Models</a>
+              <a href="#">Apps</a>
+              <a href="#">Infraestructure</a>
+              <a href="#">Data Integration</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a href="#">Content Type</a><br>
+              <div class="dropdown-content">
+                <a href="#">Code</a>
+                <a href="#">Text</a>
+                <a href="#">Image</a>
+                <a href="#">Voice</a>
+                <a href="#">Video</a>
+                <a href="#">3D</a>
+                <a href="#">Music and Sound</a>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <a href="#">Free or <br />Subscription</a><br/>
+              <div class="dropdown-content">
+                <a href="#">Free</a>
+                <a href="#">Subscription Based</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a href="#">License or <br />Open Source</a><br />
+              <div class="dropdown-content">
+                <a href="#">License</a>
+                <a href="#">Open Source</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Sidebar -->
+          <img src="menuImage.png" id="Menu" class="menu-icon" />
+
+          <!-- Close Sidebar -->
+          <img src="closeIcon.png" id="close" class="close-icon" />
+
+          <!-- Barra gris -->
+          <nav class="options">
+            <a href="#contacto">Contact Us</a>
+            <p>|</p>
+            <a href="aboutUs.html" target="_blank">About Us</a>
+          </nav>
+        </div>
+
+        <h1 class="title">AI Tools</h1>
+        <h2 class="subtitle">Explore the Future with Accesible AI's</h2>
+
+        <!-- Ruleta -->
+        <svg class="svg-ruleta"></svg>
+        <script src="ruleta.js"></script>
+
+        <!--popup función-->
+        <div class="popup" id="popup-1">
+          <div class="overlay"></div>
+          <div class="content">
+              <div class="close-btn" onclick="togglePopupClose()">&times;</div>
+              <div id="contenido" class="contenido"></div>
+          </div>
+      </div>
+      
+      </body>
+
+      <footer id="contacto">
+        <div class="footer-container">
+          <div class="logo-container">
+            <img src="navLogo.png" alt="Wizeline Logo Footer" />
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/wizelineglobal/" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"
+                style="fill: #ffffff">
+                <path
+                  d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                </path>
+              </svg>
+            </a>
+            <!-- icono de facebook -->
+            <a href="https://www.facebook.com/WizelineGlobal/?locale=es_LA" target="_blank" rel="noopener noreferrer">
+              <svg class="facebook" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                  font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                  <g transform="scale(5.12,5.12)">
+                    <path
+                      d="M25,3c-12.13844,0 -22,9.86156 -22,22c0,11.01913 8.12753,20.13835 18.71289,21.72852l1.14844,0.17383v-17.33594h-5.19727v-3.51953h5.19727v-4.67383c0,-2.87808 0.69065,-4.77363 1.83398,-5.96289c1.14334,-1.18926 2.83269,-1.78906 5.18359,-1.78906c1.87981,0 2.61112,0.1139 3.30664,0.19922v2.88086h-2.44727c-1.38858,0 -2.52783,0.77473 -3.11914,1.80664c-0.59131,1.03191 -0.77539,2.264 -0.77539,3.51953v4.01758h6.12305l-0.54492,3.51953h-5.57812v17.36523l1.13477,-0.1543c10.73582,-1.45602 19.02148,-10.64855 19.02148,-21.77539c0,-12.13844 -9.86156,-22 -22,-22zM25,5c11.05756,0 20,8.94244 20,20c0,9.72979 -6.9642,17.7318 -16.15625,19.5332v-12.96875h5.29297l1.16211,-7.51953h-6.45508v-2.01758c0,-1.03747 0.18982,-1.96705 0.50977,-2.52539c0.31994,-0.55834 0.62835,-0.80078 1.38477,-0.80078h4.44727v-6.69141l-0.86719,-0.11719c-0.59979,-0.08116 -1.96916,-0.27148 -4.43945,-0.27148c-2.7031,0 -5.02334,0.73635 -6.625,2.40234c-1.60166,1.66599 -2.39258,4.14669 -2.39258,7.34961v2.67383h-5.19727v7.51953h5.19727v12.9043c-9.04433,-1.91589 -15.86133,-9.84626 -15.86133,-19.4707c0,-11.05756 8.94244,-20 20,-20z">
+                    </path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+            <!-- icono de tiktok -->
+            <a href="https://www.tiktok.com/@wizelineglobal?lang=en" target="_blank" rel="noopener noreferrer">
+              <svg class="tiktok" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                viewBox="0 0 50 50" style="fill: #ffffff">
+                <path
+                  d="M 9 4 C 6.2495759 4 4 6.2495759 4 9 L 4 41 C 4 43.750424 6.2495759 46 9 46 L 41 46 C 43.750424 46 46 43.750424 46 41 L 46 9 C 46 6.2495759 43.750424 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.671576 6 44 7.3284241 44 9 L 44 41 C 44 42.671576 42.671576 44 41 44 L 9 44 C 7.3284241 44 6 42.671576 6 41 L 6 9 C 6 7.3284241 7.3284241 6 9 6 z M 26.042969 10 A 1.0001 1.0001 0 0 0 25.042969 10.998047 C 25.042969 10.998047 25.031984 15.873262 25.021484 20.759766 C 25.016184 23.203017 25.009799 25.64879 25.005859 27.490234 C 25.001922 29.331679 25 30.496833 25 30.59375 C 25 32.409009 23.351421 33.892578 21.472656 33.892578 C 19.608867 33.892578 18.121094 32.402853 18.121094 30.539062 C 18.121094 28.675273 19.608867 27.1875 21.472656 27.1875 C 21.535796 27.1875 21.663054 27.208245 21.880859 27.234375 A 1.0001 1.0001 0 0 0 23 26.240234 L 23 22.039062 A 1.0001 1.0001 0 0 0 22.0625 21.041016 C 21.906673 21.031216 21.710581 21.011719 21.472656 21.011719 C 16.223131 21.011719 11.945313 25.289537 11.945312 30.539062 C 11.945312 35.788589 16.223131 40.066406 21.472656 40.066406 C 26.72204 40.066409 31 35.788588 31 30.539062 L 31 21.490234 C 32.454611 22.653646 34.267517 23.390625 36.269531 23.390625 C 36.542588 23.390625 36.802305 23.374442 37.050781 23.351562 A 1.0001 1.0001 0 0 0 37.958984 22.355469 L 37.958984 17.685547 A 1.0001 1.0001 0 0 0 37.03125 16.6875 C 33.886609 16.461891 31.379838 14.012216 31.052734 10.896484 A 1.0001 1.0001 0 0 0 30.058594 10 L 26.042969 10 z M 27.041016 12 L 29.322266 12 C 30.049047 15.2987 32.626734 17.814404 35.958984 18.445312 L 35.958984 21.310547 C 33.820114 21.201935 31.941489 20.134948 30.835938 18.453125 A 1.0001 1.0001 0 0 0 29 19.003906 L 29 30.539062 C 29 34.707538 25.641273 38.066406 21.472656 38.066406 C 17.304181 38.066406 13.945312 34.707538 13.945312 30.539062 C 13.945312 26.538539 17.066083 23.363182 21 23.107422 L 21 25.283203 C 18.286416 25.535721 16.121094 27.762246 16.121094 30.539062 C 16.121094 33.483274 18.528445 35.892578 21.472656 35.892578 C 24.401892 35.892578 27 33.586491 27 30.59375 C 27 30.64267 27.001859 29.335571 27.005859 27.494141 C 27.009759 25.65271 27.016224 23.20692 27.021484 20.763672 C 27.030884 16.376775 27.039186 12.849206 27.041016 12 z">
+                </path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="copyright">&copy; 2024 Wizeline. All rights reserved.</div>
+
+          <div class="contacts">
+            <span><a href="mailto:contact@wizeline.com" style="color: #ffffff" target="_blank">contact@wizeline.com
+              </a>
+              |</span>
+            <span>Call us: 888-386-9493</span>
+          </div>
+
+          <div class="contact-phone"></div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const sidebar = document.querySelector(".menu");
+          const hamburger = document.querySelector(".menu-icon");
+          const closeButton = document.querySelector(".close-icon");
+      
+          // Evento para abrir el sidebar
+          hamburger.addEventListener("click", function () {
+            sidebar.classList.add('menu-open');
+            sidebar.classList.remove('menu-closed');
+            hamburger.style.display = "none";
+            closeButton.style.display = "block";
+          });
+      
+          // Evento para cerrar el sidebar
+          closeButton.addEventListener("click", function () {
+            sidebar.classList.add('menu-closed');
+            sidebar.classList.remove('menu-open');
+            hamburger.style.display = "block";
+            closeButton.style.display = "none";
+          });
+      
+          // Manejo de los submenus utilizando clics en lugar de hover
+          document.querySelectorAll('.dropdown').forEach(function(dropElem) {
+            dropElem.addEventListener('click', function(event) {
+              const currentlyOpen = document.querySelector('.dropdown-content.show');
+              if (currentlyOpen && currentlyOpen !== this.querySelector('.dropdown-content')) {
+                currentlyOpen.classList.remove('show');
+              }
+              this.querySelector('.dropdown-content').classList.toggle('show');
+              event.stopPropagation();
+            });
+          });
+      
+          // Cierra todos los dropdowns al hacer clic fuera de ellos
+          document.addEventListener('click', function(event) {
+            const openDropdowns = document.querySelectorAll('.dropdown-content.show');
+            openDropdowns.forEach(function(dropdown) {
+              dropdown.classList.remove('show');
+            });
+          });
+      
+          // Prevenir que clics dentro de un dropdown cierren el menú
+          document.querySelectorAll('.dropdown-content').forEach(function(content) {
+            content.addEventListener('click', function(event) {
+              event.stopPropagation();
+            });
+          });
+        });
+      </script>
+</html>
